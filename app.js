@@ -57,5 +57,8 @@ app.use('/', index);
 app.use('/', auth);
 
 
+const restaurants = require('./routes/restaurants')
+app.use('/restaurants')
+
 
 module.exports = app;
