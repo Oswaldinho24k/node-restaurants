@@ -21,6 +21,12 @@ router.get('/new', (req, res, next)=>{
   res.render('restaurants/new')
 })
 
+//update
+
+router.get('/edit/:id', (req, res, next)=>{
+  res.render('restaurants/edit')
+})
+
 
 
 module.exports = router
