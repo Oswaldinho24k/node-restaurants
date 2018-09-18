@@ -28,5 +28,9 @@ router.get('/edit/:id', (req, res, next)=>{
 })
 
 
+router.get('/delete/:id', (req, res, next)=>{
+  res.render('restaurants/delete')
+})
+
 
 module.exports = router
