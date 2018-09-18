@@ -4,7 +4,12 @@ const PLM      = require('passport-local-mongoose')
 
 const userSchema = new Schema({
   username: String,
-  email: String
+  email: String,
+  role:{
+    type:String,
+    enum:['ADMIN', 'USER'],
+    default:'ADMIN'
+  }
 }, {
   timestamps: {
     createdAt: 'created_at',
