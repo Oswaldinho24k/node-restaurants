@@ -21,6 +21,10 @@ router.get('/new', (req, res, next)=>{
   res.render('restaurants/new')
 })
 
+router.get('/edit/:_id', (req, res, next) => {
+  console.log('putita')
+})
+
 
 
 module.exports = router
