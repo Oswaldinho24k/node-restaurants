@@ -16,4 +16,8 @@ router.get('/login', (req, res) => {
   res.render('auth/login')
 })
 
+router.post('/login', passport.authenticate('local'),(req, res, next)=>{
+  res.redirect('/restaurants')
+})
+
 module.exports = router

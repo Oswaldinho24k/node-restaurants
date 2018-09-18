@@ -2,10 +2,19 @@ const express = require('express')
 const router = express.Router()
 //Restaurant
 
+function checkRole(role){
+  return (req, res, next)=>{
+    if(req.isAuthenticated() && req.user.role===role){
+      next()
+    }else{
+      res.redirect('/login')
+    }
+  }
+}
 
 //lista
 
-router.get('/', (req, res, next)=>{
+router.get('/', checkRole('ADMIN'), (req, res, next)=>{
   res.render('restaurants/list')
 })
 
