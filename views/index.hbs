@@ -1,2 +1,31 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Mapita</h1>
+
+<div id="map"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTeaHoPPFkKS2HtU35cr8Eo0xcSU3AT_Y"></script>
+
+<script>
+  function map(){
+    const map = new google.maps.Map((
+      document.getElementById('map')
+    ),
+    {
+      zoom:15,
+      center:{
+        lat:19.3977857,
+        lng:-99.1757621
+      }
+    })
+
+    const marker = new google.maps.Marker({
+      map: map,
+      position:{
+        lat:19.3977857,
+        lng:-99.1757621
+      },
+      animation:google.maps.Animation.BOUNCE
+    })
+  }
+  map()
+</script>

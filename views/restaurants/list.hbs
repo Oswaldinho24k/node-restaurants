@@ -1,1 +1,11 @@
-<h1>Lista de restaurants, puros cuates pueden ver</h1>
+<h1>Lista de restaurants</h1>
+
+<a href="/restaurants/new">
+  Agrega un lugar que no sea la casa de toño
+</a>
+
+{{#each restaurants}}
+  <a href="/restaurants/detail/{{this._id}}">
+    {{this.name}}
+  </a>
+{{/each}}
